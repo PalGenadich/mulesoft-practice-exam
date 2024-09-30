@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MuleSoft Practice Exam</title>
+        <script type="module" src="cmp/examUI/examUI.js"></script>
+        <script type="module" src="cmp/examQuestion/examQuestion.js"></script>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <exam-ui></exam-ui>
+    </body>
+
+    <template id="examUI">
+        <link rel="stylesheet" href="res/markdown/alert.css" />
+        <link rel="stylesheet" href="res/slds/button.css" />
+        <link rel="stylesheet" href="cmp/examUI/examUI.css" />
+        <div class="header">
+            <img
+                class="logo"
+                src="https://a.sfdcstatic.com/shared/images/c360-nav/salesforce-no-type-logo.svg"
+                width="3rem"
+            />
+            <h1>Salesforce MuleSoft Developer I Practice Exam</h1>
+        </div>
+        <div class="markdown-alert markdown-alert-important">
+            <p class="markdown-alert-title">
+                <svg class="octicon mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                    <path
+                        d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+                    ></path></svg
+                >Important
+            </p>
+            <p>
+                Your progress is saved in the browser's local storage. It is safe to refresh or leave this page and
+                return later.
+            </p>
+        </div>
+        <p class="marginBottom">
+            <button class="slds-button slds-button_neutral" id="resetButton">&#x21BA; Reset Progress</button>
+        </p>
+        <div class="footer">
+            <button class="slds-button slds-button_brand" id="prevButton1">&#x276E; Previous</button>
+            <button class="slds-button slds-button_brand" id="nextButton1">Next &#x276F;</button>
+        </div>
+    </template>
+
+    <template id="examQuestion">
+        <link rel="stylesheet" href="cmp/examQuestion/examQuestion.css" />
+        <h2 id="questionHeader">Question ...</h2>
+        <p id="text"></p>
+        <div id="choices"></div>
+    </template>
+</html>

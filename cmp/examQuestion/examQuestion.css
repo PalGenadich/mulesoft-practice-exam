@@ -1,0 +1,68 @@
+#text > p {
+    margin: 0.25rem;
+}
+
+#text img {
+    margin: 0.25rem 0.5rem 0.5rem 0;
+    vertical-align: top;
+}
+
+#text img:last-child {
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+img {
+    border: 1px solid #bababa;
+    border-radius: 0.25rem;
+}
+
+#choices {
+    margin: 3rem 0;
+}
+
+label {
+    display: flex;
+    align-items: baseline;
+    padding: 0.5rem 0;
+    border-radius: 0.25rem;
+}
+
+label:has(img) {
+    align-items: start;
+}
+
+label:has(img) input {
+    margin-top: 0.3rem !important;
+}
+
+label:hover {
+    background-color: #b0c1e694;
+    transition: all 0.3s;
+}
+
+#choices input {
+    margin: 0 2rem 0 1rem;
+    transform: scale(1.5);
+}
+
+#choices input,
+label {
+    cursor: pointer;
+}
+
+#choices p {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+pre {
+    margin: 0;
+}
+
+/* Question ID:35 formatting */
+.mw10 {
+    min-width: 10rem;
+    display: inline-block;
+}

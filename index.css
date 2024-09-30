@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Salesforce Sans";
+    src: url(https://a.sfdcstatic.com/shared/fonts/salesforce-sans/SalesforceSans-Regular.woff2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Salesforce Sans", Arial, sans-serif;
+    font-size: 1rem;
+    max-width: 80rem;
+    margin: auto;
+    min-height: 100vh;
+    height: auto;
+    color: #1e1e1c;
+}
+
+body {
+    display: flex;
+    overflow-y: scroll;
+    position: relative;
+    background-color: rgb(208, 216, 234);
+}
+
+html {
+    background-color: white;
+}

@@ -1,0 +1,38 @@
+.markdown-alert {
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-left: 0.25rem solid #8957e5;
+    font-size: 14px;
+}
+
+.markdown-alert-title {
+    color: #8957e5;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.markdown-alert > :first-child {
+    margin-top: 0;
+}
+
+.markdown-alert p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.markdown-alert > :last-child {
+    margin-bottom: 0;
+}
+
+.mr-2 {
+    margin-right: 0.5rem !important;
+}
+
+.octicon {
+    display: inline-block;
+    overflow: visible !important;
+    vertical-align: text-bottom;
+    fill: currentColor;
+}

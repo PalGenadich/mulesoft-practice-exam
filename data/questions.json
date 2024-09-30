@@ -1,0 +1,595 @@
+[
+    {
+        "id": 0,
+        "section": 1,
+        "text": "<p>In an application network, the implementation, not the interface, of a product API is being changed.</p><p>Does anything need to change in the other APIs or the associated applications that consume the product API, and if so, what are these changes?</p>",
+        "choices": [
+            "Nothing needs to be changed in the other APIs or their associated applications",
+            "The applications associated with the other APIs must be restarted",
+            "The other APIs must be updated to consume the updated product API",
+            "The applications associated with the other APIs must be recoded"
+        ]
+    },
+    {
+        "id": 1,
+        "section": 1,
+        "text": "<p>According to MuleSoft, what is the first step to create a Modern API for use in an application network?</p>",
+        "choices": [
+            "Create an API specification and get feedback from stakeholders",
+            "Create a prototype of the API implementation",
+            "Gather a list of requirements to secure the API",
+            "Performance tune and optimize the backend systems and network"
+        ]
+    },
+    {
+        "id": 2,
+        "section": 1,
+        "text": "<p>A development team was developing a mobile banking app. It took the team two months to create their own APIs to access transaction information from a central database.</p><p>The development team later found out that another team had already built an API that accessed this transaction information.</p><p>According to MuleSoft, what organization structure could have saved the development team two months of development time?</p>",
+        "choices": [
+            "Center for Enablement",
+            "Center of Excellence",
+            "MuleSoft Support Center",
+            "Central API Review Board"
+        ]
+    },
+    {
+        "id": 3,
+        "section": 1,
+        "text": "<p>Refer to the exhibit. The API specification supports searching for articles on the searchworld.org site.</p> <p>What is the correct URL and HTTP method to retrieve articles about \"einstein\" in XML format?</p><img srcset='res/questions/q003_i0.png 2x'/>",
+        "choices": [
+            "<img srcset='res/choices/q003_c0.png 2x'/>",
+            "<img srcset='res/choices/q003_c1.png 2x'/>",
+            "<img srcset='res/choices/q003_c2.png 2x'/>",
+            "<img srcset='res/choices/q003_c3.png 2x'/>"
+        ]
+    },
+    {
+        "id": 4,
+        "section": 2,
+        "text": "<p>A RAML specification is defined to manage customers with a unique identifier for each customer record.</p><p>What URI does MuleSoft recommend to uniquely access the customer identified with the unique ID 1234?</p>",
+        "choices": [
+            "<pre>/customers/1234</pre>",
+            "<pre>/customers?operation=get&custid=1234</pre>",
+            "<pre>/customers/custid=1234</pre>",
+            "<pre>/customers?custid=true&custid=1234</pre>"
+        ]
+    },
+    {
+        "id": 5,
+        "section": 2,
+        "text": "<p>Refer to the exhibit. This RAML file generates an error.</p><p>What needs to be done to make this valid RAML?</p><img srcset='res/questions/q005_i0.png 1x'/>",
+        "choices": [
+            "Indent the get method under the {flight_id} resource",
+            "Remove the blank line on row 7",
+            "Enclose the {flight_id} resource in parentheses () instead of curly braces {}",
+            "Outdent the {flight_id} resource"
+        ]
+    },
+    {
+        "id": 6,
+        "section": 2,
+        "text": "<p>A RAML example fragment named BankAccountsExample.raml is placed in the examples folder in an API specification project.</p><p>What is the correct syntax to reference the fragment?</p>",
+        "choices": [
+            "<pre>examples: !include examples/BankAccountsExample.raml</pre>",
+            "<pre>examples: !include BankAccountsExample.raml</pre>",
+            "<pre>examples: #import BankAccountsExample.raml</pre>",
+            "<pre>examples: #import examples/BankAccountsExample.raml</pre>"
+        ]
+    },
+    {
+        "id": 7,
+        "section": 2,
+        "text": "<p>Refer to the exhibit. A shopping API contains a method to look up store details by department.</p><p>According to this RAML specification, what is a valid URL for a web client to submit a GET request for details about the pharmacy department at the store with storeId 23?</p><pre>/stores:\n    post:\n    get:\n    /{storeId}:\n        get:\n            queryParameters:\n                department:\n                store_id:</pre>",
+        "choices": [
+            "<pre>/stores/23?store_id=23&department=\"pharmacy\"</pre>",
+            "<pre>/stores/{23}?store_id=23&department=\"pharmacy\"</pre>",
+            "<pre>/stores/${23}?store_id=23&department=\"pharmacy\"</pre>",
+            "<pre>/stores/${23}/store_id=23&department=\"pharmacy\"</pre>"
+        ]
+    },
+    {
+        "id": 8,
+        "section": 2,
+        "text": "<p>Refer to the exhibit. The RAML file defines a method to create users.</p><p>What is the correct way to create a user in a web client?</p><img srcset='res/questions/q008_i0.png 1.5x'/>",
+        "choices": [
+            "<img srcset='res/choices/q008_c0.png 2x'/>",
+            "<img srcset='res/choices/q008_c1.png 2x'/>",
+            "<img srcset='res/choices/q008_c2.png 2x'/>",
+            "<img srcset='res/choices/q008_c3.png 2x'/>"
+        ]
+    },
+    {
+        "id": 9,
+        "section": 3,
+        "text": "<p>Refer to the exhibit. The Set Payload transformer's value is set to {'year': '2020'}.</p><p>What message value should be added to the Logger component to output the message \"The year is 2020\", without hardcoding 2020?</p><img srcset='res/questions/q009_i0.png 1.5x'/>",
+        "choices": [
+            "<pre>'The year is #[payload.year]'</pre>",
+            "<pre>'#[\"The year is ++ payload.year\"]'</pre>",
+            "<pre>'#[\"The year is \" + payload.year]'</pre>",
+            "<pre>'#[The year is $(payload.year)]'</pre>"
+        ]
+    },
+    {
+        "id": 10,
+        "section": 3,
+        "text": "<p>A web client sends a request to http://localhost:8081/books/0471767840. The value \"0471767840\" is captured by a Set Variable transformer to a variable named bookISBN.</p><p>What is a valid DataWeave expression to access the bookISBN variable later in the flow?</p>",
+        "choices": [
+            "<pre>vars.bookISBN</pre>",
+            "<pre>bookISBN</pre>",
+            "<pre>variables.bookISBN</pre>",
+            "<pre>attributes.bookISBN</pre>"
+        ]
+    },
+    {
+        "id": 11,
+        "section": 3,
+        "text": "<p>A client submits a GET request to a Mule 4 application to the endpoint /customers?id=48493.</p><p>Where is the ID stored in the Mule event by the HTTP Listener?</p>",
+        "choices": ["Attributes", "Inbound Properties", "Variables", "Payload"]
+    },
+    {
+        "id": 12,
+        "section": 3,
+        "text": "<p>An HTTP Request operation sends an HTTP request with a non-empty JSON-formatted object payload to an external HTTP endpoint. The response from the external HTTP endpoint returns an XML-formatted body.</p><p>The result is stored in a target named theResult.</p><p>What is the format of the payload that is input to the next event processor after the HTTP Request?</p>",
+        "choices": ["application/json", "application/dw", "application/xml", "application/java"]
+    },
+    {
+        "id": 13,
+        "section": 3,
+        "text": "<p>Refer to the exhibits. A web client submits a request to http://localhost:8081/flights.</p><p>What is the result at the end of the flow?</p><img srcset='res/questions/q013_i0.png 2x'/><img srcset='res/questions/q013_i1.png 2x'/>",
+        "choices": ["\"String\"", "\"Object\"", "\"Java\"", "\"XML\""]
+    },
+    {
+        "id": 14,
+        "section": 3,
+        "text": "<p>Refer to the exhibit. An HTTP Listener is being configured to accept requests from web clients on URLs like http://localhost:8081/accounts/10, where the number 10 can change to other numbers.</p><p>In order to capture the number in a parameter named ID, to what must the path of the HTTP Listener component be set?</p><img srcset='res/questions/q014_i0.png 1.5x'/>",
+        "choices": [
+            "<pre>/accounts/{ID}</pre>",
+            "<pre>/accounts/ID</pre>",
+            "<pre>/accounts/#[ID]</pre>",
+            "<pre>#[/accounts/ID]</pre>"
+        ]
+    },
+    {
+        "id": 15,
+        "section": 4,
+        "text": "<p>Refer to the exhibits. The main flow contains an HTTP Request in the middle of the flow. The HTTP Listeners and HTTP Request use default configurations.</p><p>After a web client submits a request to http://localhost:8081/order?color=red, what values are accessible to the Logger at the end of the main flow?</p><img srcset='res/questions/q015_i0.png 2x'/><img srcset='res/questions/q015_i1.png 2x'/>",
+        "choices": [
+            "payload<br/>quantity var<br/>",
+            "payload<br/>",
+            "payload<br/>color query param<br/>",
+            "payload<br/>color query param<br/>quantity var"
+        ]
+    },
+    {
+        "id": 16,
+        "section": 4,
+        "text": "<p>Refer to the exhibits. The Mule application has multiple HTTP Listeners contained in various configuration XML files.</p><p>Each HTTP Listener is configured with the same host and with the port number, path, and operation shown in its display name.</p><p>What is the minimum number of global elements that must be defined to support all these HTTP Listeners?</p><img srcset='res/questions/q016_i0.png 2x'/>",
+        "choices": ["2", "1", "3", "4"],
+        "sort": true
+    },
+    {
+        "id": 17,
+        "section": 4,
+        "text": "<p>Refer to the exhibits. The main flow contains an HTTP Request. The HTTP Listeners and HTTP Request use default configurations.</p><p>A web client sends a GET request to the main flow's HTTP Listener that includes a modelName query parameter.</p><p>What value(s) are accessible in the child flow?</p><img srcset='res/questions/q017_i0.png 2x'/>",
+        "choices": [
+            "The payload<br/>",
+            "The payload<br/>The modelName query param<br/>",
+            "The payload<br/>The planeModel var<br/>",
+            "The payload<br/>The modelName query param<br/>The planeModel var"
+        ]
+    },
+    {
+        "id": 18,
+        "section": 4,
+        "text": "<p>Refer to the exhibit. The main flow contains a Flow Reference for the child flow.</p><p>After a web client submits a request to http://localhost:8081/order?color=red, what values are accessible in the child flow?</p><img srcset='res/questions/q018_i0.png 2x'/>",
+        "choices": [
+            "payload<br/>quantity var<br/>color query param",
+            "payload<br/>",
+            "payload<br/>color query param<br/>",
+            "payload<br/>quantity var<br/>"
+        ]
+    },
+    {
+        "id": 19,
+        "section": 4,
+        "text": "<p>Refer to the exhibits. This Mule application has an HTTP Request that is configured with hardcoded values. To change this, the Mule application is configured to use a properties file named config.yaml.</p><p>To what valid expression can the HTTP Request host value be set so that the value is no longer hardcoded?</p><img srcset='res/questions/q019_i0.png 2x'/>",
+        "choices": [
+            "<pre>${training.host}</pre>",
+            "<pre>${training:host}</pre>",
+            "<pre>#[training.host]</pre>",
+            "<pre>#[training:host]</pre>"
+        ]
+    },
+    {
+        "id": 20,
+        "section": 4,
+        "text": "<p>To avoid hard-coding values, a flow uses some property placeholders and the corresponding values are stored in a configuration file.</p><p>Where does the configuration file's location need to be specified in the Mule application?</p>",
+        "choices": ["A global element", "A flow attribute", "The pom.xml file", "The mule-artifact.json file"]
+    },
+    {
+        "id": 21,
+        "section": 5,
+        "text": "<p>A Mule application contains two HTTP Listeners, each configured for different API endpoints: http://acme.com/apis/orders and http://acme.com/apis/customers.</p><p>What base path value should be set in an HTTP Listener config element so that it can be used to configure both HTTP Listeners?</p>",
+        "choices": [
+            "<pre>/apis/</pre>",
+            "<pre>/apis/?</pre>",
+            "<pre>/apis/*</pre>",
+            "<pre>/apis/orders|customers</pre>"
+        ]
+    },
+    {
+        "id": 22,
+        "section": 5,
+        "text": "<p>Refer to the exhibit. How many private flows does APIkit generate from the RAML specification?</p><img srcset='res/questions/q022_i0.png 1.5x'/>",
+        "choices": ["4", "3", "2", "1"],
+        "sort": true
+    },
+    {
+        "id": 23,
+        "section": 5,
+        "text": "<p>When using MuleSoft's API-led connectivity approach, what HTTP method in a RESTful web service is generally recommended to be used to completely replace an existing resource?</p>",
+        "choices": ["PUT", "PATCH", "POST", "GET"]
+    },
+    {
+        "id": 24,
+        "section": 5,
+        "text": "<p>An API specification is defined using RAML.</p><p>What is the next step to create a REST Connect connector from this API specification?</p>",
+        "choices": [
+            "Publish the API specification to Anypoint Exchange",
+            "Add the specification to a Mule project's src/main/resources/api folder",
+            "Download the API specification and build the interface using APIkit",
+            "Implement the API specification using Flow Designer"
+        ]
+    },
+    {
+        "id": 25,
+        "section": 6,
+        "text": "<p>Refer to the exhibits. The /daily folder exists, is currently empty, and files can be read and written to this folder by Anypoint Studio.</p><p>This Mule application is run in Anypoint Studio, and then a file named productUpdates.txt containing the text \"START\" is written to the /daily folder.</p><p>What is in the /daily folder after the readUpdates flow completes for the first time?</p><img srcset='res/questions/q025_i0.png 2x'/><img srcset='res/questions/q025_i1.png 2x'/>",
+        "choices": [
+            "A file named productUpdates.txt.bak containing the text \"START\"",
+            "A file named productUpdates.txt.bak containing the text \"FINISHED\"",
+            "A file named productUpdates.txt containing the text \"START\"<br/>A file named productUpdates.txt.bak containing the text \"FINISHED\"",
+            "A file named productUpdates.txt containing the text \"START\"<br/>A file named productUpdates.txt.bak containing the text \"START\""
+        ]
+    },
+    {
+        "id": 26,
+        "section": 6,
+        "text": "<p>What payload is returned by an Anypoint Connector for Database's Select operation that does not match any rows in the database?</p>",
+        "choices": ["An empty arra", "false", "null", "An exception"]
+    },
+    {
+        "id": 27,
+        "section": 6,
+        "text": "<p>Refer to the exhibits. In the payload of a POST request to this Mule application, a web client sends a new order record<pre>{ \"oid\": \"100\", \"custId\": \"annie@acme.com\", \"status\": \"NEW ORDER\" }</pre></p><p>In this Mule application, what value must be used in the Input Parameters field of the Database Insert operation to properly pass the order record values to the SQL statement?</p><img srcset='res/questions/q027_i0.png 2x'/><img srcset='res/questions/q027_i1.png 2x'/>",
+        "choices": [
+            "<pre>#[\n    {\n        oid: payload.oid,\n        custId: payload.custId,\n        status: payload.status\n    }\n]</pre>",
+            "<pre>#[\n    [\n        payload.oid,\n        payload.custId,\n        payload.status\n    ]\n]</pre>",
+            "<pre>#[\n    {\n        orderId: payload.oid,\n        customerName: payload.custId,\n        status: payload.status\n    }\n]</pre>",
+            "<pre>#[\n    inputParams: [\n        payload.oid,\n        payload.custId,\n        payload.status\n    ]\n]</pre>"
+        ]
+    },
+    {
+        "id": 28,
+        "section": 6,
+        "text": "<p>Refer to the exhibits. When the flow executes, the now() function in the Transform Message component returns \"2021-08-26T13:32:10.64-07:00\".</p><p>What is written to the records.csv file when the flow executes?</p><img srcset='res/questions/q028_i0.png 2x'/><img srcset='res/questions/q028_i1.png 2x'/>",
+        "choices": [
+            "<pre>{\n    \"transaction_id\": \"SS-4848-44KK-4SYQ\",\n    \"account_id\": \"KA-382-SKD44\",\n    \"name\": \"Max Mule\",\n    \"position\": \"sell\",\n    \"write_date\": \"2021-08-26T13:32:10.64-07:00\"\n}</pre>",
+            "<pre>{\n    \"transaction_id\": \"SS-4848-44KK-4SYQ\",\n    \"account_id\": \"KA-382-SKD44\",\n    \"name\": \"Max Mule\",\n    \"position\": \"sell\"\n}</pre>",
+            "<pre>transaction_id, account_id, name, position, write_date\n\"SS-4848-44KK-4SYQ\",\"KA-382-SKD44\", \"Max Mule\", \"sell\",\n\"2021-08-26T13:32:10.64-07:00\"</pre>",
+            "<pre>transaction_id, account_id, name, position\n\"SS-4848-44KK-4SYQ\",\"KA-382-SKD44\", \"Max Mule\", \"sell\"</pre>"
+        ]
+    },
+    {
+        "id": 29,
+        "section": 6,
+        "text": "<p>Refer to the exhibits. The main flow of this Mule application uses an HTTP connector operation and two JMS connector operations.</p><p>The Mule application is run and starts successfully, and then a local web client sends a request to http://localhost:8081/.</p><p>What payload is then returned to the web client from the Mule application?</p><img srcset='res/questions/q029_i0.png 2x'/><img srcset='res/questions/q029_i1.png 1.5x'/>",
+        "choices": ["3", "1", "2", "4"],
+        "sort": true
+    },
+    {
+        "id": 30,
+        "section": 6,
+        "text": "<p>A flow contains a Database Select operation followed by an HTTP Request operation. The flow must combine and return data received from these two connector operations.</p><p>What is a valid and idiomatic (used for its intended purpose) way to capture both payloads so the payload output from the second HTTP Request operation does not overwrite the payload output from the first Database Select operation?</p>",
+        "choices": [
+            "Save the payload from the Database Select operation to a variable",
+            "Put the Database Select operation in a Try scope configured with a transaction",
+            "Set the combinedPayloads attribute to true in the Database Select operation configuration",
+            "Put the Database Select operation inside a Cache scope"
+        ]
+    },
+    {
+        "id": 31,
+        "section": 7,
+        "text": "<p>Refer to the exhibits. In this Mule application files are written from inside a For Each scope.</p><p>What is written to the file system when the flow executes, and what payload is returned in the response to the web client?</p><img srcset='res/questions/q031_i0.png 2x'/><img srcset='res/questions/q031_i1.png 2x'/>",
+        "choices": [
+            "Two files are created, each containing a different array of one or two account objects<br/>The response payload is a JSON formatted object of account objects that is created in the Set Payload transformer",
+            "One file is written with an error message<br/>The response payload is the error message",
+            "Two files are created, each containing a different object of one or two account objects<br/>The response payload is a JSON formatted array of two objects, where each object is a duplicate copy of the object of account objects written to each file",
+            "Three files are created, one for each account object<br/>The response payload is a success message without any account objects"
+        ]
+    },
+    {
+        "id": 32,
+        "section": 7,
+        "text": "<p>A batch job is defined by a Batch Job scope that contains three batch steps. The Batch Job scope and Batch Step scopes are configured with default acceptPolicy values.</p><p>An event processor in the second Batch Step scope throws an error because the input data is incomplete.</p><p>What is the default behavior of the batch job after the error is thrown?</p>",
+        "choices": [
+            "The Batch Job scope stops processing all records",
+            "The second Batch Step scope's error is reversed and the repaired records are passed to the third Batch Step scope for processing",
+            "The second Batch Step scope is retried with the same data",
+            "All existing in-flight records are discarded, but new records are still passed to the first Batch Step scope and processed"
+        ]
+    },
+    {
+        "id": 33,
+        "section": 7,
+        "text": "<p>Refer to the exhibit. The input array of strings is passed to the batch job, which does NOT do any filtering or aggregating.</p><p>What payload is logged by the Logger component?</p><img srcset='res/questions/q033_i0.png 2x'/>",
+        "choices": [
+            "Summary report of processed records",
+            "[ \"Apple\", \"Banana\" ]",
+            "[ \"Apple12\", \"Banana12\" ]",
+            "[ \"Apple1\", \"Banana1\", 2 ]"
+        ]
+    },
+    {
+        "id": 34,
+        "section": 7,
+        "text": "<p>A database table contains a recordID column that increases as new records get added to the table.</p><p>A Mule application is created to read from this database table.</p><p>What is the key process to enable manual watermarking for requests to this database table using a Scheduler event source and a Database Select operation?</p>",
+        "choices": [
+            "Save the max recordID from the set of recordIDs in an Object Store and reference this recordID in subsequent database requests",
+            "Enable automatic watermarking in the Database Select operation",
+            "Set the Watermark column in the Scheduler to the recordID",
+            "Save the max recordID from the set of recordIDs in a variable and reference this variable in subsequent database requests"
+        ]
+    },
+    {
+        "id": 35,
+        "section": 7,
+        "text": "<p>Refer to the exhibits. The Set Payload transformer in the For Each scope and the Set Payload transformer in the Batch Job scope's Batch Step scope each contain a DataWeave expression to sleep (pause processing) for the number of milliseconds in the current payload. The Batch Job scope's block size is set to 1.</p><p>In what order are the payloads logged in the For Each scope and in the Batch Step scope?</p><img srcset='res/questions/q035_i0.png 1.5x'/><img srcset='res/questions/q035_i1.png 1.5x'/>",
+        "choices": [
+            "<span><span class=\"mw10\">For Each scope:</span>2000, 200, 1000, 100</span><span><span class=\"mw10\">Batch Step scope:</span>40, 300, 3000, 4000</span>",
+            "<span><span class=\"mw10\">For Each scope:</span>100, 200, 1000, 2000</span><span><span class=\"mw10\">Batch Step scope:</span>4000, 40, 3000, 300</span>",
+            "<span><span class=\"mw10\">For Each scope:</span>2000, 200, 1000, 100</span><span><span class=\"mw10\">Batch Step scope:</span>4000, 40, 3000, 300</span>",
+            "<span><span class=\"mw10\">For Each scope:</span>100, 200, 1000, 2000</span><span><span class=\"mw10\">Batch Step scope:</span>40, 300, 3000, 4000</span>"
+        ]
+    },
+    {
+        "id": 36,
+        "section": 7,
+        "text": "<p>Refer to the exhibit.</p><p>What can be added to the flow to persist data across different flow executions?</p><img srcset='res/questions/q036_i0.png 1.5x'/>",
+        "choices": [
+            "Key-value pairs in the ObjectStore",
+            "Session variables",
+            "Properties of the Mule runtime flow object",
+            "Properties of the Mule runtime app object"
+        ]
+    },
+    {
+        "id": 37,
+        "section": 8,
+        "text": "<p>A function named newProdCode needs to be defined that accepts two input parameters, an integer value for itemID and a string value for productCategory, and returns a new product code.</p><p>What is the correct DataWeave code to define the newProdCode function?</p>",
+        "choices": [
+            "<pre>fun newProdCode(itemID: Number, productCategory:\nString) = \"PC-\" ++ productCategory ++ (itemID as String)</pre>",
+            "<pre>function newProdCode(itemID: Number, productCategory:\nString) = \"PC-\" ++ productCategory ++ (itemID as String)</pre>",
+            "<pre>var newProdCode(itemID: Number, productCategory:\nString) -> \"PC-\" ++ productCategory ++ (itemID as String)</pre>",
+            "<pre>fun newProdCode(itemID: Number, productCategory:\nString) -> \"PC-\" ++ productCategory ++ (itemID as String)</pre>"
+        ]
+    },
+    {
+        "id": 38,
+        "section": 8,
+        "text": "<p>A Utility.dwl file is located in a Mule project at src/main/resources/modules. The Utility.dwl file defines a function named pascalize that reformats strings to pascal case.</p><p>What is valid DataWeave code to call the pascalize function in a Transform Message component?</p>",
+        "choices": [
+            "<pre>%dw 2.0\noutput application/json\nimport modules::Utility\n—\nUtility::pascalize( \"max mule\" )</pre>",
+            "<pre>%dw 2.0\noutput application/json\nimport modules::Utility\n—\npascalize( \"max mule\" )</pre>",
+            "<pre>%dw 2.0\noutput application/json\nimport modules.Utility\n—\nUtility.pascalize( \"max mule\" )</pre>",
+            "<pre>%dw 2.0\noutput application/json\nimport modules.Utility\n—\npascalize( \"max mule\" )</pre>"
+        ]
+    },
+    {
+        "id": 39,
+        "section": 8,
+        "text": "<p>Refer to the exhibit. DataWeave code needs to be written to transform the input payload to the output payload.</p><p>What is valid DataWeave code to perform this transformation?</p><img srcset='res/questions/q039_i0.png 1x'/>",
+        "choices": [
+            "<pre>%dw 2.0\noutput application/xml\n---\nemployees :\n    employee @(\n        firstName: payload[0].employee1.firstName\n        ,\n        lastName: payload[0].employee1.lastName\n    ) : null</pre>",
+            "<pre>%dw 2.0\noutput application/xml\n---\nemployees :\n    employee (\n        firstName: payload[0].employee1.firstName\n        ,\n        lastName: payload[0].employee1.lastName\n    ) : \"\"</pre>",
+            "<pre>%dw 2.0\noutput application/xml\n---\nemployees :\n    employee @(\n        firstName: payload[0].employee1.firstName\n        ;\n        lastName: payload[0].employee1.lastName\n    ) : null</pre>",
+            "<pre>%dw 2.0\noutput application/xml\n---\nemployees :\n    employee (\n        firstName: payload[0].employee1.firstName\n        ;\n        lastName: payload[0].employee1.lastName\n    ) : \"\"</pre>"
+        ]
+    },
+    {
+        "id": 40,
+        "section": 8,
+        "text": "<p>Refer to the exhibit. An event payload contains an unordered array of flight objects, where every object has a price key and a toAirport key.</p><p>What is valid DataWeave code to return flights with a price under 500, grouped by toAirport in ascending order, with the lowest price first?</p><img srcset='res/questions/q040_i0.png 2x'/>",
+        "choices": [
+            "<pre>payload filter $.price < 500 orderBy $.price groupBy $.toAirport</pre>",
+            "<pre>payload groupBy $.toAirport filter $.price < 500 orderBy $.price</pre>",
+            "<pre>payload groupBy $.toAirport filter $.price > 500 orderBy $.price</pre>",
+            "<pre>payload filter $.price > 500 orderBy $.price groupBy $.toAirport</pre>"
+        ]
+    },
+    {
+        "id": 41,
+        "section": 8,
+        "text": "<p>What is the output type of the DataWeave map function?</p>",
+        "choices": ["Array", "String", "Object", "Map"]
+    },
+    {
+        "id": 42,
+        "section": 8,
+        "text": "<p>What is the correct way to format the decimal 20.3844 as a string to two decimal places?</p>",
+        "choices": [
+            "<pre>20.3844 as String {format: \".0#\"}</pre>",
+            "<pre>20.3844 format( String: \".0#\" )</pre>",
+            "<pre>20.3844 as String ( {format: \".0#\"} )</pre>",
+            "<pre>20.3844 {format: \".0#\" as String}</pre>"
+        ]
+    },
+    {
+        "id": 43,
+        "section": 9,
+        "text": "<p>Refer to the exhibits. The <when> expression for the Choice router needs to be written.</p><p>What is a valid <when> expression to route Mule events to the non-default flow?</p><img srcset='res/questions/q043_i0.png 2x'/><img srcset='res/questions/q043_i1.png 1.5x'/>",
+        "choices": [
+            "<pre>#[ 'MuleSoft' == payload.'company' ]</pre>",
+            "<pre>#[ company = \"MuleSoft\" ]</pre>",
+            "<pre>#[ if( 'MuleSoft' == payload.company ) ]</pre>",
+            "<pre>#[ if( company = \"MuleSoft\" ) ]</pre>"
+        ]
+    },
+    {
+        "id": 44,
+        "section": 9,
+        "text": "<p>A Scatter-Gather processes three separate HTTP requests. Each request returns a Mule event with a JSON payload.</p><p>What is the final output of the Scatter-Gather?</p>",
+        "choices": [
+            "An object containing three Mule event objects",
+            "An array of three JSON payload objects",
+            "An array of three Mule event objects",
+            "An object containing three JSON payload objects"
+        ]
+    },
+    {
+        "id": 45,
+        "section": 9,
+        "text": "<p>Refer to the exhibits. The Mule application does NOT define any global error handler elements.</p><p>What is the response to a web client request to http://localhost:8081 ?</p><img srcset='res/questions/q045_i0.png 2x'/><img srcset='res/questions/q045_i1.png 2x'/>",
+        "choices": ["Validation Error", "\"After\"", "\"Before\"", "null"]
+    },
+    {
+        "id": 46,
+        "section": 9,
+        "text": "<p>Refer to the exhibits. The Mule application contains a Choice router.</p><p>What is logged when the flow completes?</p><img srcset='res/questions/q046_i0.png 2x'/><img srcset='res/questions/q046_i1.png 1.5x'/>",
+        "choices": ["\"US\"", "\"EU\"", "[\"US\",\"EU\"]", "\"REGION\""]
+    },
+    {
+        "id": 47,
+        "section": 9,
+        "text": "<p>An event contains a payload that is an array of objects.</p><p>How is the event routed in a Scatter-Gather?</p>",
+        "choices": [
+            "The entire event is sent to each route and processed in parallel",
+            "The entire event is sent to each route and processed sequentially",
+            "The event is split and events with different smaller payloads are routed and processed in parallel",
+            "The event is split and events with different smaller payloads are routed and processed sequentially"
+        ]
+    },
+    {
+        "id": 48,
+        "section": 10,
+        "text": "<p>A Mule application contains a global error handler configured to catch any errors.</p><p>Where must the global error handler be specified so that it catches all errors from flows that do not have their own error handlers?</p>",
+        "choices": [
+            "In a global element",
+            "In a configuration properties file",
+            "In a pom.xml file",
+            "In the mule-artifact.json file"
+        ]
+    },
+    {
+        "id": 49,
+        "section": 10,
+        "text": "<p>Refer to the exhibits. The Mule application does NOT define any global error handlers.</p><p>The Validation component in the private flow throws an error.</p><p>What response message is returned to a client request to the main flow's HTTP Listener?</p><img srcset='res/questions/q049_i0.png 2x'/><img srcset='res/questions/q049_i1.png 2x'/>",
+        "choices": [
+            "\"Success - main flow\"",
+            "\"Error - main flow\"",
+            "\"Error - private flow\"",
+            "\"Validation Error\""
+        ]
+    },
+    {
+        "id": 50,
+        "section": 10,
+        "text": "<p>Refer to the exhibits. A web client makes an HTTP GET request to the flow's HTTP Listener.</p><p>The Validation component then throws an error with the message \"Validate - Payload is an Integer\".</p><p>What response message is returned to the web client?</p><img srcset='res/questions/q050_i0.png 2x'/><img srcset='res/questions/q050_i1.png 2x'/>",
+        "choices": [
+            "\"Validate - Payload is an Integer\"",
+            "\"Error - main flow\"",
+            "\"Success - Begin main flow\"",
+            "\"Success - End main flow\""
+        ]
+    },
+    {
+        "id": 51,
+        "section": 10,
+        "text": "<p>Refer to the exhibits. The Mule application does NOT define any global error handlers.</p><p>A web client sends an HTTP POST request to the HTTP Listener and the Validation component in the Try scope throws an error.</p><p>What response message is returned to the web client?</p><img srcset='res/questions/q051_i0.png 2x'/><img srcset='res/questions/q051_i1.png 2x'/>",
+        "choices": ["\"ERROR2\"", "\"ERROR1\"", "\"END\"", "\"Validation Error\""]
+    },
+    {
+        "id": 52,
+        "section": 10,
+        "text": "<p>Refer to the exhibits.The Mule application does NOT define any global error handlers. The main flow is configured with three error handlers.</p><p>A web client submits a request to the HTTP Listener and the HTTP Request throws an HTTP:NOT_FOUND error.</p><p>What response message is returned?</p><img srcset='res/questions/q052_i0.png 2x'/><img srcset='res/questions/q052_i1.png 2x'/>",
+        "choices": [
+            "\"APP: API RESOURCE NOT FOUND\"",
+            "\"HTTP: NOT FOUND\"",
+            "\"Other error\"",
+            "\"Success - main flow\""
+        ]
+    },
+    {
+        "id": 53,
+        "section": 11,
+        "text": "<p>Refer to the exhibit. This error occurs when a Mule project is imported into and run in Anypoint Studio. The Mule project has a dependency that is not in a MuleSoft Maven repository, but the Mule project successfully ran on the original computer where the Mule project was developed.</p><p>What is the next step to fix the error and get the project to run successfully?</p><img srcset='res/questions/q053_i0.png 2x'/>",
+        "choices": [
+            "Install the dependency to the computer's local Maven repository",
+            "Deploy the dependency to a MuleSoft Maven repository",
+            "Edit the dependency in the Mule project's pom.xml file",
+            "Add the dependency to the MULE_HOME/bin folder"
+        ]
+    },
+    {
+        "id": 54,
+        "section": 11,
+        "text": "<p>Refer to the exhibits. The orders.csv file is read and then processed to look up the orders in a database. The Mule application is debugged in Anypoint Studio and stops at the breakpoint.</p><p>What payload is shown in the debugger at this breakpoint?</p><img srcset='res/questions/q054_i0.png 2x'/>",
+        "choices": ["100", "An empty array", "The database response", "The entire CSV file"]
+    },
+    {
+        "id": 55,
+        "section": 11,
+        "text": "<p>Refer to the exhibits. A web client sends an HTTP GET request that includes a destination query parameter to the flow's HTTP Listener.</p><p>The Web Service Consumer throws a WSC:BAD_REQUEST error.</p><p>What should be set in the getFlights flow to fix this error?</p><img srcset='res/questions/q055_i0.png 2x'/><img srcset='res/questions/q055_i1.png 1.5x'/>",
+        "choices": [
+            "A SOAP payload before the Consume operation that contains the destination query parameter",
+            "A header in the Consume operation equal to the destination query parameter",
+            "A property in the Consume operation equal to the destination query parameter",
+            "A JSON payload before the Consume operation that contains the destination query parameter"
+        ]
+    },
+    {
+        "id": 56,
+        "section": 12,
+        "text": "<p>A Mule application has been deployed to CloudHub and now needs to be governed. IT will not allocate additional vCores for a new Mule application to act as an API proxy.</p><p>What should be done to or with the Mule application to preserve the current vCore usage while still allowing the Mule application to be managed by API Manager?</p>",
+        "choices": [
+            "Modify the Mule application to use autodiscovery to register with API Manager",
+            "Upload the Mule application's JAR file to the API instance in API Manager",
+            "Deploy the Mule application behind a VPC and configure the VPC to connect to API Manager",
+            "Register the Mule application in Runtime Manager to connect to API Manager"
+        ]
+    },
+    {
+        "id": 57,
+        "section": 12,
+        "text": "<p>A Mule project contains a MySQL Database dependency.</p><p>The project is exported from Anypoint Studio so it can be deployed to CloudHub.</p><p>What export options create the smallest deployable archive that will successfully deploy to CloudHub?</p>",
+        "choices": [
+            "<img srcset='res/choices/q057_c0.png 2x'/>",
+            "<img srcset='res/choices/q057_c1.png 2x'/>",
+            "<img srcset='res/choices/q057_c2.png 2x'/>",
+            "<img srcset='res/choices/q057_c3.png 2x'/>"
+        ]
+    },
+    {
+        "id": 58,
+        "section": 12,
+        "text": "<p>A Mule application uses the ${http.port} property placeholder for its HTTP Listener port when it is deployed to CloudHub.</p><p>What benefit does this Mule application configuration enable?</p>",
+        "choices": [
+            "CloudHub to automatically change the HTTP port to allow external clients to connect to the HTTP Listener",
+            "Clients to VPN directly to the Mule application at the Mule application's configured HTTP port",
+            "MuleSoft Support to troubleshoot the application by connecting directly to the HTTP Listener",
+            "CloudHub to automatically register the application with API Manager"
+        ]
+    },
+    {
+        "id": 59,
+        "section": 12,
+        "text": "<p>An SLA-based policy has been enabled in API Manager.</p><p>What should now be changed in the RAML specification and/or the API proxy to enforce the SLA-based policy?</p>",
+        "choices": [
+            "Add required headers to the RAML specification and redeploy the new API proxy",
+            "Restart the API proxy to clear the API policy cache",
+            "Add new property placeholders and redeploy the API proxy",
+            "Add new environment variables and restart the API proxy"
+        ]
+    }
+]
