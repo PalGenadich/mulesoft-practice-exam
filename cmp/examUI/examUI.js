@@ -10,6 +10,7 @@ class ExamUI extends HTMLElement {
     shadow;
     page;
     questionOrder;
+    displayAnswers;
 
     constructor() {
         super();
@@ -29,13 +30,14 @@ class ExamUI extends HTMLElement {
     }
 
     readLocalStorage() {
-        this.page = localStorage.getItem("page") || 0;
-        this.questionOrder = localStorage.getItem("questionOrder");
-        this.questionOrder = this.questionOrder ? JSON.parse(this.questionOrder) : this.randomizedOrder;
+        this.page = JSON.parse(localStorage.getItem("page")) || 0;
+        this.displayAnswers = JSON.parse(localStorage.getItem("displayAnswers"));
+        this.questionOrder = JSON.parse(localStorage.getItem("questionOrder")) || this.randomizedOrder;
     }
 
     saveLocalStorage() {
         localStorage.setItem("page", this.page);
+        localStorage.setItem("displayAnswers", this.displayAnswers);
     }
 
     resetProgress() {
@@ -157,6 +159,7 @@ class ExamUI extends HTMLElement {
             <li><span>Skipped: </span><span>${unansweredCounter}</span></li>
             <li><span>Result: </span><span>${correctCounter / questions.length >= PASS_THRESHOLD ? `<span style="color: green">PASSED !!!</span>` : `<span style="color: #b70000;">FAILED</span>`}</span></li>
         </ul>`;
+        this.displayAnswers = true;
         this.saveLocalStorage();
     }
 }

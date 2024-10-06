@@ -26,6 +26,7 @@ label {
     align-items: baseline;
     padding: 0.5rem 0;
     border-radius: 0.25rem;
+    margin: 0.25rem 0;
 }
 
 label:has(img) {
@@ -39,6 +40,18 @@ label:has(img) input {
 label:hover {
     background-color: #b0c1e694;
     transition: all 0.3s;
+}
+
+label.selected {
+    background-color: #a9d0ef;
+}
+
+label.wrong {
+    background-color: #ff000030;
+}
+
+label.correct {
+    background-color: #00ff0054;
 }
 
 #choices input {

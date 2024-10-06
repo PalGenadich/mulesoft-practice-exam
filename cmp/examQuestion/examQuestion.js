@@ -7,6 +7,7 @@ class ExamQuestion extends HTMLElement {
     choiceRoot;
     numberOfQuestionsViewed;
     seletedChoices;
+    displayAnswers;
 
     constructor() {
         super();
@@ -42,13 +43,12 @@ class ExamQuestion extends HTMLElement {
     }
 
     async readLocalStorage() {
-        this.questions = localStorage.getItem("examQuestions");
-        this.questions = this.questions
-            ? JSON.parse(this.questions)
-            : (await import("../../data/questions.json", { with: { type: "json" } })).default;
-        this.numberOfQuestionsViewed = localStorage.getItem("numberOfQuestionsViewed") || 0;
-        this.seletedChoices = localStorage.getItem("seletedChoices");
-        this.seletedChoices = this.seletedChoices ? JSON.parse(this.seletedChoices) : [];
+        this.questions =
+            JSON.parse(localStorage.getItem("examQuestions")) ||
+            (await import("../../data/questions.json", { with: { type: "json" } })).default;
+        this.numberOfQuestionsViewed = JSON.parse(localStorage.getItem("numberOfQuestionsViewed")) || 0;
+        this.seletedChoices = JSON.parse(localStorage.getItem("seletedChoices")) || [];
+        this.displayAnswers = JSON.parse(localStorage.getItem("displayAnswers"));
     }
 
     saveLocalStorage() {
@@ -85,6 +85,7 @@ class ExamQuestion extends HTMLElement {
     }
 
     renderChoices() {
+        const answer = this.seletedChoices[this.data.displayIndex - 1];
         for (const [i, ch] of this.data.choices.entries()) {
             const input = document.createElement("input");
             input.type = "radio";
@@ -92,7 +93,7 @@ class ExamQuestion extends HTMLElement {
             input.id = "choice" + ch.originalIndex;
             input.value = ch.originalIndex;
             input.onclick = this.handleSelection.bind(this);
-            input.checked = this.seletedChoices[this.data.displayIndex - 1] == ch.originalIndex;
+            input.checked = answer == ch.originalIndex;
 
             const content = document.createElement("p");
             // Show non-randomized choice ID when DEBUG is true
@@ -100,6 +101,19 @@ class ExamQuestion extends HTMLElement {
 
             const labelContainer = document.createElement("label");
             labelContainer.setAttribute("for", input.id);
+
+            if (input.checked) {
+                labelContainer.classList.add("selected");
+            }
+
+            if (this.displayAnswers && typeof answer === "number") {
+                if (input.checked) {
+                    labelContainer.classList.add(answer == 0 ? "correct" : "wrong");
+                } else if (input.value == 0) {
+                    labelContainer.classList.add("correct");
+                }
+            }
+
             labelContainer.appendChild(input);
             labelContainer.appendChild(content);
             this.choiceRoot.appendChild(labelContainer);
@@ -108,6 +122,8 @@ class ExamQuestion extends HTMLElement {
 
     handleSelection(event) {
         this.seletedChoices[this.data.displayIndex - 1] = +event.target.value;
+        this.shadow.querySelector(".selected")?.classList.remove("selected");
+        event.target.parentElement.classList.add("selected");
         this.saveViewedQuestions();
     }
 

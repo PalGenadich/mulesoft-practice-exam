@@ -256,7 +256,7 @@
         "id": 26,
         "section": 6,
         "text": "<p>What payload is returned by an Anypoint Connector for Database's Select operation that does not match any rows in the database?</p>",
-        "choices": ["An empty arra", "false", "null", "An exception"]
+        "choices": ["An empty array", "false", "null", "An exception"]
     },
     {
         "id": 27,
